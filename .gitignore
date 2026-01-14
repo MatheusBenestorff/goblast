@@ -1,0 +1,14 @@
+*.exe
+*.dll
+*.so
+*.dylib
+/bin/
+/dist/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+vendor/
