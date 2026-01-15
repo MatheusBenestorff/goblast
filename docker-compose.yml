@@ -1,0 +1,19 @@
+services:
+  # The application
+  goblast:
+    build: .
+    container_name: goblast_cli
+    tty: true
+    stdin_open: true
+    depends_on:
+      - target-api
+    # command: attack --url http://target-api:80 --workers 50
+
+  # The punching bag
+  target-api:
+    image: traefik/whoami
+    container_name: target_api
+    ports:
+      - "8080:80"
+    expose:
+      - "80"
