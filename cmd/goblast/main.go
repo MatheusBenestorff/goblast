@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	loadtester.RunLoadTest("http://localhost:8080", 100)
+	loadtester.RunLoadTest("http://localhost:8080", 1000, 5)
 }
